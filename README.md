@@ -1,4 +1,4 @@
-# ML-IFCE2020.1
+# ML-IFCE2020.1 :computer:
 This repository aims to record all codes and exercises of the ML discipline
 
 # :pencil: Questions & Answers
