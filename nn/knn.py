@@ -1,9 +1,5 @@
 import torch
 
-
-# torch.arange
-# torch.linespace
-
 class KNN(object):
     def __init__(self, K, samples_train, samples_targets, regression=False):
         self.K = K
