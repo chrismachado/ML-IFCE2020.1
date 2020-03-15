@@ -2,9 +2,14 @@
 This repository aims to record all codes and exercises of the ML discipline
 
 # :pencil: Questions & Answers
-#### [KNN](homework/rp-ex1.pdf)
+#### [K-Nearest Neighbours](homework/rp-ex1.pdf)
 
 - [x] [rp-ex1-1-answer](rp-ex1-1-answer.ipynb)
 - [x] [rp-ex1-2-answer](rp-ex1-2-answer.ipynb)
+
+  ##### Authors
+  - [Christiano Machado](https://github.com/chrismachado)
+  - [Vitor Veras](https://github.com/vitorverasm) 
  
-#### [PERCEPTRON]()
+#### :hourglass_flowing_sand: [Perceptron]()
+ - [ ] To do...
