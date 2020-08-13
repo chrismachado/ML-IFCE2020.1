@@ -9,9 +9,9 @@ This repository aims to record all codes and exercises of the ML discipline
 
 
 #### :hourglass_flowing_sand: [Linear Regression]()
- - [ ] [rp-ex3-1-answer]()
- - [ ] [rp-ex3-2-answer]()
- - [ ] [rp-ex3-2-answer]()
+ - [x] [rp-ex3-1-answer](rp-ex3-1-answer.ipynb)
+ - [x] [rp-ex3-2-answer](rp-ex3-2-answer.ipynb)
+ - [x] [rp-ex3-2-answer](rp-ex3-3-answer.ipynb)
 
 ## Authors
   - [Christiano Machado](https://github.com/chrismachado)
