@@ -31,7 +31,7 @@ class LogisticRegression(object):
 
         return idx_digit1, idx_digit2, idx_nondigit
 
-    def __label_to_class(self, train_or_test='train'):
+    def __label_to_binclass(self, train_or_test='train', labels=(1, -1)):
         idx1, idx2, _ = self.__filter(train_or_test=train_or_test)
         
         if train_or_test == 'train':
@@ -42,10 +42,10 @@ class LogisticRegression(object):
             y = self.y_test.clone().detach()
 
         for idx in idx1:
-            y[idx] = 1
+            y[idx] = labels[0]
 
         for idx in idx2:
-            y[idx] = -1
+            y[idx] = labels[1]
 
         idxs = idx1 + idx2
         idxs.sort()
@@ -54,8 +54,8 @@ class LogisticRegression(object):
 
         return x, y
 
-    def fit(self, stop=10):
-        x, y = self.__label_to_class(train_or_test='train')
+    def fit(self, stop):
+        x, y = self.__label_to_binclass(train_or_test='train')
 
         theta = torch.zeros((x.shape[1], 1), dtype=float)
 
@@ -68,7 +68,7 @@ class LogisticRegression(object):
         return theta
 
     def predict(self, theta):
-        x, _ = self.__label_to_class(train_or_test='test')
+        x, _ = self.__label_to_binclass(train_or_test='test')
 
         y = 1 / (1 + torch.exp(-x @ theta))
 
@@ -77,14 +77,30 @@ class LogisticRegression(object):
         return torch.where(y >= 0.5, ones, -ones)
         
     def acc(self, ypred):
-        _, y = self.__label_to_class(train_or_test='test')
+        _, y = self.__label_to_binclass(train_or_test='test')
         hitrate = 0
+        missclass = []
         for i in range(y.shape[0]):
             if ypred[i] == y[i]:
-                hitrate += 1
+                hitrate += 1.0 * 100 / y.shape[0]
+            else:
+                missclass.append(i)
              
-        return hitrate * 100 / y.shape[0]
         
+        return hitrate, missclass
+        
+    def show_miss(self, plt, miss):
+        sample = miss[torch.randint(0, len(miss) - 1, (1,))]
+        x, y = self.__label_to_binclass(labels=self.digits)
+        img = torch.reshape(x[sample], (28, 28))
+
+        plt.imshow(img, cmap='gray')
+        plt.title(f'Label: {y[sample].item()}')
+
+        return plt    
+
+    def set_digits(self, digits):
+        self.digits = digits
 
 class Regression(object):
     def __init__(self, x, y, size=0.8, ones=True):

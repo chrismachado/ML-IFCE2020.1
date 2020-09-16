@@ -1,5 +1,5 @@
 # :computer: ML-IFCE2020.1 
-This repository aims to record all codes and exercises of the ML discipline
+This repository aims to record all codes and exercises of the ML discipline. All neural network are implemented in the module [nn/](nn/)
 
 # :pencil: Questions & Answers
 #### [K-Nearest Neighbours](homework/rp-ex1.pdf)
@@ -15,6 +15,9 @@ This repository aims to record all codes and exercises of the ML discipline
 
 #### RBF
 - [x] [rp-ex4rbf-1-answer](rp-ex4rbf-1-answer.ipynb)
+
+#### Logistic Regression
+- [x] [rp-ex5-reglogistc-answer](rp-ex5-reglogistc-answer.ipynb)
 
 ## Authors
   - [Christiano Machado](https://github.com/chrismachado)
