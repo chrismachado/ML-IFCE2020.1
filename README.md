@@ -19,6 +19,10 @@ This repository aims to record all codes and exercises of the ML discipline. All
 #### Logistic Regression
 - [x] [rp-ex5-reglogistc-answer](rp-ex5-reglogistc-answer.ipynb)
 
+#### MLP
+- [x] [rp-ex6-1mlp-answer](rp-ex6-1mlp-answer.ipynb)
+- [x] [rp-ex6-2mlp-answer](rp-ex6-2mlp-answer.ipynb)
+
 ## Authors
   - [Christiano Machado](https://github.com/chrismachado)
   - [Vitor Veras](https://github.com/vitorverasm) 
