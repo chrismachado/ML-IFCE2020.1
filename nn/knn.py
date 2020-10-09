@@ -1,5 +1,6 @@
 import torch
 
+
 class KNN(object):
     def __init__(self, K, samples_train, samples_targets, regression=False):
         self.K = K
@@ -14,5 +15,5 @@ class KNN(object):
 
         if self.regression:
             return knns.mean(dim=1)
-        
+
         return knns.mode(dim=1).values
