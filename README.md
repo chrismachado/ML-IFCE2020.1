@@ -23,6 +23,9 @@ This repository aims to record all codes and exercises of the ML discipline. All
 - [x] [rp-ex6-1mlp-answer](rp-ex6-1mlp-answer.ipynb)
 - [x] [rp-ex6-2mlp-answer](rp-ex6-2mlp-answer.ipynb)
 
+### SVM
+- [x] [rp-ex7-svm-answer](rp-ex7-svm-answer.ipynb)
+
 ## Authors
   - [Christiano Machado](https://github.com/chrismachado)
   - [Vitor Veras](https://github.com/vitorverasm) 
