@@ -25,6 +25,8 @@ This repository aims to record all codes and exercises of the ML discipline. All
 
 ### SVM
 - [x] [rp-ex7-svm-answer](rp-ex7-svm-answer.ipynb)
+- [x] [rp-ex8-svmkernel-answer](rp-ex8-svmkernel-answer.ipynb)
+
 
 ## Authors
   - [Christiano Machado](https://github.com/chrismachado)
