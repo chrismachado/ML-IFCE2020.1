@@ -16,7 +16,7 @@ class MLP(Module):
                  lr,
                  train_samples,
                  test_samples):
-        super().__init__()
+        super(Module, self).__init__()
         self.input_layer = Linear(input_layer, hidden_layer)
         self.hidden_layer = Linear(hidden_layer, output_layer)
         self.epochs = epochs

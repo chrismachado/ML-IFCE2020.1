@@ -26,7 +26,7 @@ class SVM:
 
         if (y_train == 1).all() or (y_train == -1).all():
             print('Trying again, only one class was detected...')
-            return run(N, target)
+            return self.run(N, target)
 
         xx, yy = torch.meshgrid([torch.arange(-1.5, 1.5, 0.01), torch.arange(-1.5, 1.5, 0.01)])
         full_square = torch.cat((xx.reshape(-1, 1), yy.reshape(-1, 1)), dim=1)
@@ -49,7 +49,6 @@ class SVM:
         H = H.astype(np.double)
         y = y
         return m, n, H
-
 
     def solve(self, m, n, H, x, y):
         P = cvxopt_matrix(H)
